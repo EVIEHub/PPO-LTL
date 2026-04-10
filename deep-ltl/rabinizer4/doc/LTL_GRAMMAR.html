@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="ltl-input-grammar">LTL Input Grammar</h1>
+<p>All tools based on <code>Owl</code> understand the same LTL input language.<br />
+The following constructs are supported:</p>
+<h2 id="propositional-logic">Propositional Logic</h2>
+<ul>
+<li>True: <code>tt</code>, <code>true</code>, <code>1</code></li>
+<li>False: <code>ff</code>, <code>false</code>, <code>0</code></li>
+<li>Literal: <code>[a-zA-Z_][a-zA-Z_0-9]*</code></li>
+<li>Negation: <code>!</code>, <code>NOT</code></li>
+<li>Implication: <code>-&gt;</code>, <code>=&gt;</code>, <code>IMP</code></li>
+<li>Bi-implication: <code>&lt;-&gt;</code>, <code>&lt;=&gt;</code>, <code>BIIMP</code></li>
+<li>Exclusive Disjunction: <code>^</code>, <code>XOR</code></li>
+<li>Conjunction: <code>&amp;&amp;</code>, <code>&amp;</code>, <code>AND</code></li>
+<li>Disjunction: <code>||</code>, <code>|</code>, <code>OR</code></li>
+<li>Parenthesis: <code>(</code>, <code>)</code></li>
+</ul>
+<h2 id="modal-logic">Modal Logic</h2>
+<ul>
+<li>Finally: <code>F</code></li>
+<li>Globally: <code>G</code></li>
+<li>Next: <code>X</code></li>
+<li>(Strong) Until: <code>U</code></li>
+<li>Weak Until: <code>W</code></li>
+<li>(Weak) Release: <code>R</code></li>
+<li>Strong Release: <code>M</code></li>
+</ul>
+<h2 id="precedence-rules">Precedence Rules</h2>
+<p>The parser uses the following precedence:</p>
+<p><code>OR</code> &lt; <code>AND</code> &lt; Binary Expressions &lt; Unary Expressions &lt; Literals, Constants, Parentheses</p>
+<p>For chained binary expressions (without parentheses), the rightmost binary operator takes precedence.<br />
+For example, <code>a -&gt; b U c</code> is parsed as <code>a -&gt; (b U c)</code>.</p>
+</body>
+</html>

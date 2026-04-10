@@ -1,0 +1,10 @@
+*.log
+*.pkl
+model*
+*.html
+*.p
+*.pyc
+event*
+log*
+*.svg
+*.lock

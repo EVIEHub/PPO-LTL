@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="snapshot">1.2-SNAPSHOT</h1>
+<p>Library:</p>
+<ul>
+<li>Support the <code>xor</code> operator in the LTL input.</li>
+</ul>
+<h1 id="section">1.1 (2017-03-28)</h1>
+<p>Tools:</p>
+<ul>
+<li><code>fgx2dga</code> (Preview): A translation of LTL-fairness formulas (<code>FG</code>/<code>GF</code>) to deterministic automata with a generic acceptance condition, meaning the acceptance condition is an arbitrary boolean combination of <code>Inf</code> and <code>Fin</code> sets. The tool supports all LTL operators using a fallback mechanism. This is a preview, thus functionality as well as the name is subject to change.</li>
+</ul>
+<p>Library:</p>
+<ul>
+<li>Extended simplifier for Fairness Formulas</li>
+<li>Redesigned automaton classes.</li>
+<li>Implement an emptiness check for a given SCC.</li>
+</ul>
+<h1 id="section-1">1.0 (2017-02-03)</h1>
+<p>Tools:</p>
+<ul>
+<li><code>ltl2ldba</code>: A translator of LTL to limit-deterministic Büchi automata.</li>
+<li><code>ltl2dpa</code>: A translator of LTL to deterministic parity automata via LDBAs.</li>
+<li><code>ltl2da</code>: A translator of LTL to any deterministic automata. The tool is a wrapper for the before mentioned tools and returns the smallest automaton.</li>
+<li><code>nba2ldba</code>: A translator of non-deterministic Büchi to limit-deterministic Büchi automata.</li>
+</ul>
+</body>
+</html>
